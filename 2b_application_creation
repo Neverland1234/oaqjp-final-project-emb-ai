@@ -1,0 +1,17 @@
+cd /home/project/final_project
+touch test_emotion_detection.py
+import unittest
+from emotion_detection import emotion_detector
+
+class TestEmotionDetector(unittest.TestCase):
+    def test_emotion_detector(self):
+        result = emotion_detector('I am really mad about this')
+        self.assertIn('anger', result)
+
+if __name__ == '__main__':
+    unittest.main()
+python3
+from emotion_detection import emotion_detector
+print(emotion_detector('I am really mad about this'))
+exit()
+python3 test_emotion_detection.py
